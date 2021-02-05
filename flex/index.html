@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport ，content=" width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <!--
+    在这个页面我们实现登录框：body 元素内的 form 元素;
+      1.form整体尺寸和位置：
+        当屏幕尺寸大时，我们希望 form 以固定尺寸居中。
+        当屏幕尺寸小时，我们希望 from 占满屏幕。
+      2.form结构：
+        form.1 ： 
+          首行：登录标题 【选择登录账号】
+          列表：列出身份列表，点击选取
+  -->
+  <style>
+    body {
+      /* body 作为容器占满屏幕 */
+      width: 100VW;
+      height: 100VH;
+      /* 定义 body 作为 flex container */
+      display: flex;
+      /* 主轴方向：垂直 */
+      flex-direction: column;
+      /* 主轴换行：不换行 */
+      flex-wrap: nowrap;
+      /* 主轴方向对齐：居中 */
+      justify-content: start;
+      /* 交叉轴方向对齐：居中 */
+      align-items: center;
+    }
+
+    header {
+      /* 作为 flex item 的缩放：当屏幕变小时腾出位置给article */
+      flex-shrink: 1;
+      /* 给header一个尺寸，实现对form的定位 */
+      height: 20%;
+      width: 100%;
+    }
+
+    article {
+      /* 作为 flex item 的缩放：当屏幕变小时大小不变 */
+      /* article本身作为form的flex容器 */
+      display: flex;
+      /* 主轴方向：水平 */
+      flex-direction: row;
+      /* 主轴换行：不换行 */
+      flex-wrap: nowrap;
+      /* 主轴对齐方向：居中 */
+      justify-content: center;
+      /* 交叉轴方向：排满 */
+      align-items: stretch;
+      /* 当屏幕足够大时，指定尺寸 */
+      width: 100%;
+    }
+
+    form {
+      /* 指定border以观察form的尺寸 */
+      border: 1px solid black;
+      height: 400px;
+      min-height: 400px;
+      width: 247px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--空白的header-->
+  <header>头部</header>
+  <!--页面中居中的登录框-->
+  <article>
+    <form>表单</form>
+  </article>
+
+</body>
+
+</html>
